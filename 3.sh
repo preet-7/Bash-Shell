@@ -1,5 +1,4 @@
 #!/bin/bash
 #
-read -p "enter package name to search	" name
-sudo apt search $name
-
+read -p "enter your user name  " USER_NAME
+echo ${USER_NAME}
