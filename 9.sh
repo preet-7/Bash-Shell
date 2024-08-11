@@ -1,9 +1,21 @@
 #!/bin/bash
-#
-read -p "enter any number " num
-if [ $num -lt 100 ]
-then
-	echo "less than 100"
-else
-	echo "greater than 100"
-fi
+
+cd /etc/profile.d/
+
+echo "
+
+### ##   ### ###  ### ###   ## ##   ### ##    ## ##   
+ ##  ##   ##  ##   ##  ##  ##   ##   ##  ##  ##   ##  
+ ##  ##   ##       ##  ##  ##   ##   ##  ##  ####     
+ ##  ##   ## ##    ##  ##  ##   ##   ##  ##   #####   
+ ##  ##   ##       ### ##  ##   ##   ## ##       ###  
+ ##  ##   ##  ##    ###    ##   ##   ##      ##   ##  
+### ##   ### ###     ##     ## ##   ####      ## ##   
+                                                      
+" > devops.txt
+
+echo '#!/bin/bash'; while IFS= read -r line; do echo "echo '$line'"; done < devops.txt > banner.sh
+
+chmod +x /etc/profile.d/banner.sh
+
+

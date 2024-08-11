@@ -1,6 +1,16 @@
 #!/bin/bash
-#
-day=$(date +%d)
-if [ $(( day % 2)) -eq 0 ]; then
-  echo "The day is even."
+
+if [ $# -ne 1 ]
+then
+	echo "invalid"
+	exit 1
 fi
+
+if [ $(command -v $1) ] 
+then
+	echo "yes $1 found"
+else
+	echo "no $1 not found"
+fi
+
+
